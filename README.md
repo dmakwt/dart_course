@@ -514,6 +514,143 @@ void main() {
 ```
 
 ### Part7 - Function
+- create function
+```dart
+void sayHi() {
+  print('Hi');
+  print('Welcome');
+}
+
+void main() {
+  sayHi();
+  sayHi();
+  sayHi();
+}
+```
+
+
+- pass values inside function
+```dart
+void main() {
+  // Before
+  const name = 'Dhari';
+  const age = 23;
+  print('My name: $name, and my age: $age');
+
+  const name2 = 'Rashid';
+  const age2 = 26;
+  print('My name: $name2, and my age: $age2');
+
+  // After
+  printBio('Dhari', 23);
+  printBio('Rashid', 26);
+}
+
+void printBio(String name, int age) {
+  print('My name: $name, and my age: $age');
+}
+```
+
+- return value from function
+```dart
+void main() {
+  String bio = printBio('Dhari', 23);
+  print(bio);
+}
+
+String printBio(String name, int age) {
+  return 'My name: $name, and my age: $age';
+}
+```
+
+- EX (8) -    (5 min)
+```dart
+// Write a function called sum that takes a List of values as an
+// argument (List<double> values), then return the sum of all values
+
+// SOL
+void main() {
+  var value = sum([2, 3, 5]);
+  print(value);
+}
+
+double sum(List<double> values) {
+  double sum = 0;
+
+  for (var value in values) {
+    sum = sum + value;
+//     sum += value;
+  }
+  return sum;
+}
+
+```
+
+- positional argument vs named argument
+```dart
+void main() {
+  // before
+//   final bio = printBio('Dhari', 23);
+//   print(bio);
+
+  // After
+//   final bio = printBio(name: 'Dhari', age:23);
+  final bio = printBio(age: 23, name: 'Dhari');
+  print(bio);
+}
+
+String printBio({required String name, required int age}) {
+  return 'My name: $name, and my age: $age';
+}
+```
+- default value
+```dart
+void main() {
+  final bio1 = printBio(name: 'Dhari', age: 23);
+  print(bio1);
+
+  final bio2 = printBio(name: 'Dhari');
+  print(bio2);
+
+}
+
+String printBio({required String name, int age = 30}) {
+  return 'My name: $name, and my age: $age';
+}
+```
+
+
+- EX (9) - (5 min)
+```dart
+// Write a function called add that takes two arguments (int a, int b), then return the 
+// sum. The arguments should be positional arguments
+
+// SOL
+void main() {
+  int value1 = add(num1: 1, num2: 3);
+  print(value1);
+}
+
+int add({required int num1, required int num2}) {
+  return num1 + num2;
+}
+```
+
+- return value ( => )
+```dart
+void main() {
+  int value2 = add2(num1: 10);
+  print(value2);
+}
+
+int add2({int num1 = 0, int num2 = 0}) => num1 + num2;
+```
+
+
+
+
+
+
 
 
 
