@@ -1,5 +1,5 @@
 # Dart
-### Part1
+### Part1 - Basic
 
 - main method
 ```dart
@@ -255,7 +255,7 @@ void main() {
 }
 ```
 
-EX (5) - (4 min)
+- EX (5) - (4 min)
 ```dart
 void main() {
   //  Create var age  = 20
@@ -310,5 +310,197 @@ void main() {
   }
 }
 ```
+
+### Part4 - List (Array)
+
+- Create List - the index start from zero
+```dart
+void main() {
+  // List colors = ['Blue', 'Orange', 'Green'];
+  var colors = ['Blue', 'Orange', 'Green'];
+  
+  print(colors[0]);
+  print(colors[1]);
+  print(colors[2]); 
+  
+  // change the list value
+  colors[0] = 'Red';
+  print(colors[0]);
+}
+```
+
+- Using for loop inside List
+```dart
+void main() {
+  var colors = ['Blue', 'Orange', 'Green'];
+ 
+  for (var color in colors) {
+    print(color);
+  }
+}
+```
+
+- EX (6) - (5 min)
+```dart
+void main() {
+   // Given this list of integers: [1, 4, 2, 7].
+  // Write a program that prints the sum of all these values.
+  
+  // SOL
+  var values = [1, 4, 2, 7];
+  var sum = 0;
+  for (var value in values) {
+    sum = sum + value;
+    // sum += value;
+  }
+  
+  print(sum);
+}
+```
+
+- List properties
+```dart
+void main() {
+  var colors1 = ['Blue', 'Orange', 'Green'];
+  
+  print(colors1.length);
+  print(colors1.isEmpty);
+  print(colors1.isNotEmpty);
+  print(colors1.first);
+  print(colors1.last);
+}
+```
+
+- List method - add(value)
+```dart
+void main() {
+  var colors2 = ['Blue', 'Orange', 'Green'];
+  print(colors2);
+  
+  colors2.add('Red');
+  print(colors2);
+}
+```
+
+- List method - insert(index, value)
+```dart
+void main() {
+  var colors3 = ['Blue', 'Orange', 'Green'];
+  print(colors3);
+  colors3.insert(0, 'Red');
+  print(colors3);
+}
+```
+
+- List method - removeAt(index)
+```dart
+void main() {
+  var colors4 = ['Blue', 'Orange', 'Green'];
+  print(colors4);
+  colors4.removeAt(1);
+  print(colors4);
+}
+```
+
+- List method - clear()
+```dart
+void main() {
+  var colors5 = ['Blue', 'Orange', 'Green'];
+  print(colors5);
+  colors5.clear();
+  print(colors5);
+}
+```
+
+- List method - contains(value)
+```dart
+void main() {
+  var colors6 = ['Blue', 'Orange', 'Green'];
+  print(colors6.contains('Blue'));
+}
+```
+
+- List method - indexOf(value)
+```dart
+void main() {
+  var colors7 = ['Blue', 'Orange', 'Green'];
+  print(colors7.indexOf('Green'));
+  print(colors7.indexOf('Red'));
+}
+```
+
+### Part5 - Map (Object)
+
+
+- Create Map
+```dart
+void main() {
+//       Map<String, dynamic> person = {
+//     'name': 'Dhari',
+//     'age': 23,
+//     'height': 174,
+//   };
+  
+    var person = {
+    'name': 'Dhari',
+    'age': 23,
+    'height': 174,
+  };
+  
+  // Keys not index
+  print(person['name']);
+  print(person['age']);
+}
+```
+
+- Change Map values
+```dart
+void main() {
+  var person = {
+    'name': 'Dhari',
+    'age': 20,
+    'height': 174,
+  };
+  print(person);
+
+  person['age'] = 23;
+  print(person);
+}
+```
+
+- EX (7) - (4 min)
+```dart
+void main() {
+   // Creat 'Map' car,
+  // print 'name: 'Tesla', model: 2021, color: white'
+}
+```
+
+- Map inside List
+```dart
+void main() {
+    var people = [
+    {
+      'name': 'Dhari',
+      'age': 23,
+      'height': 174,
+    },
+    {
+      'name': 'Nasser',
+      'age': 27,
+      'height': 167,
+    }
+  ];
+  
+  for (var person in people) {
+    print(person);
+  }
+}
+```
+
+
+
+
+
 
 
