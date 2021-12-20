@@ -1,5 +1,5 @@
 # Dart
-
+### Part1
 
 - main method
 ```dart
@@ -205,11 +205,36 @@ void main() {
   print('value = ${value1 + 1}');
 }
 ```
+- var vs const
 
-##
+```dart
+void main() {
+  var age = 22;
+  print(age);
+  
+  age = 25;
+  print(age);
 
+  const age1 = 22;
+  print(age1);
+  
+  final age2 = 22;
+  print(age2);
+}
+```
 
+- dynamic
+```dart
+void main() {
+  dynamic name2 = 'Dhari';
+  print(name2);
 
+  name2 = 20;
+  print(name2);
+}
+```
+
+### Part2
 
 
 
