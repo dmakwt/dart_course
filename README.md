@@ -234,10 +234,81 @@ void main() {
 }
 ```
 
-### Part2
+### Part2 - Conditions
 
+- if condition
+```dart
+void main() {
+  var grade = 80;
 
+  if (grade >= 90) {
+    print('A');
+  } else if (grade >= 80) {
+    print('B');
+  } else if (grade >= 70) {
+    print('C');
+  } else if (grade >= 60) {
+    print('D');
+  } else {
+    print('F');
+  }
+}
+```
 
+EX (5) - (4 min)
+```dart
+void main() {
+  //  Create var age  = 20
+  // أذا أكبر من 60 شايب
+  // أذا أكبر من 18 شباب
+  // أذا أكبر من 15 مراهق
+  // غيره طفل
+  
+}
+```
 
+- switch condition
+```dart
+void main() {
+  var score = 1;
+  switch (score) {
+    case 1:
+      print('Gold');
+      break;
+    case 2:
+      print('Silver');
+      break;
+    case 3:
+      print('Bronze');
+      break;
+    default:
+      print('N/A');
+      break;
+  }
+}
+```
+
+### Part3 - Looping
+
+- while
+```dart
+void main() {
+  var i = 1;
+  
+  while (i <= 3) {
+    print(i);
+    i++;
+  }
+}
+```
+
+- for loop
+```dart
+void main() {
+   for (var x = 1; x <= 3; x++) {
+    print(x);
+  }
+}
+```
 
 
