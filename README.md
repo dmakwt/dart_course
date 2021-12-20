@@ -429,8 +429,8 @@ void main() {
 }
 ```
 
-### Part5 - Map (Object)
 
+### Part5 - Map (Object)
 
 - Create Map
 ```dart
@@ -498,9 +498,22 @@ void main() {
 }
 ```
 
+### Part6 - null safety
 
+- null safety
+```dart
+void main() {
+  String value1 = 'abc'; // String
+  //  String value1 = null; -> error
+  
+  String? value2 = null; // null or String
 
+  print(value1);
+  print(value2);
+}
+```
 
+### Part7 - Function
 
 
 
