@@ -798,7 +798,46 @@ void main() {
 
 
 
+- Flutter widgets
+```dart
 
+class Widget {
+  void build() {
+    print('Build my widget');
+  }
+}
+
+class Text extends Widget {
+  String text;
+  TextStyle style;
+
+  Text(this.text, {required this.style});
+  
+  @override
+  void build() {
+    print('Text widget: $text');
+  }
+  
+}
+
+class TextStyle {
+  String color;
+  double fontSize;
+
+  TextStyle({required this.color, required this.fontSize});
+}
+
+void main() {
+  Widget customText = Text(
+    'Hi',
+    style: TextStyle(color: 'Red', fontSize: 14),
+  );
+  
+  
+  customText.build();
+  
+}
+```
 
 
 
