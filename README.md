@@ -646,6 +646,155 @@ void main() {
 int add2({int num1 = 0, int num2 = 0}) => num1 + num2;
 ```
 
+### Part8 - Class
+
+- Create Class - (Start with Uppercase) (Blueprint, Object oriented programming)
+```dart
+class Person {
+  String name = '';
+  int age = 0;
+}
+
+void main() {
+  final person1 = Person();
+  print(person1.name);
+  print(person1.age);
+
+  person1.name = 'Dhari';
+  person1.age = 23;
+  print(person1.name);
+  print(person1.age);
+
+  final person2 = Person();
+  person2.name = 'Rashid';
+  person2.age = 30;
+  print(person2.name);
+  print(person2.age);
+}
+```
+
+- Create method
+```dart
+class Person {
+  String name = '';
+  int age = 0;
+
+  void printBio() {
+    print('Name: $name, Age: $age');
+  }
+}
+
+void main() {
+  final person1 = Person();
+  person1.name = 'Dhari';
+  person1.age = 23;
+  person1.printBio();
+
+  final person2 = Person();
+  person2.name = 'Rashid';
+  person2.age = 30;
+  person2.printBio();
+}
+
+```
+
+
+- Constructor
+```dart
+class Person {
+  String name = '';
+  int age = 0;
+
+  // الكوسنركتر هي عبارة عن فكشن راح اتنفذ قبل لا ينشئ لنا الاوبجكت
+  Person(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  void printBio() {
+    print('Name: $name, Age: $age');
+  }
+}
+
+void main() {
+  // Before
+//    final person1 = Person();
+//    person1.name = 'Dhari';
+//    person1.age = 23;
+//    person1.printBio();
+
+  // After
+  final person1 = Person('Dhari', 23);
+  person1.printBio();
+}
+```
+
+- Constructor shortcut
+```dart
+class Person {
+  String name = '';
+  int age = 0;
+
+  Person(this.name, this.age);
+
+  void printBio() {
+    print('Name: $name, Age: $age');
+  }
+}
+
+void main() {
+  // After
+  final person1 = Person('Dhari', 23);
+  person1.printBio();
+}
+```
+
+- Named argument
+```dart
+class Person {
+  final String name;
+  final int age;
+
+  Person({required this.name, required this.age});
+
+  void printBio() {
+    print('Name: $name, Age: $age');
+  }
+}
+
+void main() {
+  final person1 = Person(name: 'Dhari', age: 22);
+  person1.printBio();
+}
+```
+
+- EX (10) - (5 min)
+```dart
+// Write a class called (Product) with two properties
+// 1- name, 2- price
+// write one method that print the details
+// Ex..   "Name of Product: iPhone, Price: 1300"
+
+class Product {
+  final String name;
+  final double price;
+
+  Product({required this.name, required this.price});
+
+  void printDetails() {
+    print('Name of Product: $name, Price: \$$price');
+  }
+}
+
+void main() {
+  // After
+  final iPhone = Product(name: 'iPhone', price: 1300.99);
+  iPhone.printDetails();
+
+//   person1.age = 55; error الان المتغير عبارة عن ثابت
+}
+
+```
 
 
 
